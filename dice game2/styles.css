@@ -1,0 +1,127 @@
+/* styles.css - Enhanced Dicee Game Styling */
+
+/* Google Fonts (already linked in HTML) */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Lobster');
+
+/* Base styles */
+body {
+    background-color: #393E46;  /* Your dark background */
+    margin: 0;
+    padding: 20px;
+    font-family: 'Indie Flower', cursive;  /* Default font */
+    text-align: center;
+}
+
+/* Main container */
+.container {
+    width: 70%;  /* Your width */
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;  /* Added vertical padding for space */
+}
+
+/* Dice containers: Flexbox for better alignment */
+.dice {
+    display: inline-flex;  /* Improved from inline-block: flex for vertical centering */
+    flex-direction: column;
+    align-items: center;  /* Centers child elements */
+    margin: 0 40px;  /* More space between dice */
+}
+
+.dice p {
+    font-size: 2rem;  /* Your size */
+    color: #4ECCA3;  /* Your green */
+    font-family: 'Indie Flower', cursive;
+    margin-bottom: 10px;  /* Space before image */
+}
+
+/* Dice images: Specific classes with enhancements */
+.img1, .img2 {
+    width: 80%;  /* Your width, but capped for consistency */
+    max-width: 150px;  /* Prevents over-sizing */
+    height: auto;  /* Maintains aspect ratio */
+    border-radius: 15px;  /* Rounded corners for modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Deeper shadow for 3D dice */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover */
+}
+
+.img1:hover, .img2:hover {
+    transform: scale(1.1);  /* Zoom on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);  /* Enhanced shadow */
+}
+
+/* Heading */
+h1 {
+    margin: 30px;  /* Your margin */
+    font-family: 'Lobster', cursive;
+    text-shadow: 5px 0 #232931;  /* Your shadow */
+    font-size: 8rem;  /* Your large size */
+    color: #4ECCA3;  /* Your green */
+    transition: color 0.3s ease;  /* Subtle color shift if JS updates */
+}
+
+/* Button: New addition - styled to match theme */
+#rollButton {
+    display: block;  /* Centers it */
+    margin: 40px auto;  /* Space around, auto center */
+    padding: 15px 30px;  /* Comfortable size */
+    font-size: 1.8rem;  /* Readable */
+    font-family: 'Lobster', cursive;  /* Matches h1 */
+    background-color: #4ECCA3;  /* Green to match accents */
+    color: #232931;  /* Dark text for contrast */
+    border: none;
+    border-radius: 50px;  /* Pill shape */
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  /* Lifted shadow */
+    transition: all 0.3s ease;  /* Smooth interactions */
+}
+
+#rollButton:hover {
+    background-color: #45a049;  /* Darker green */
+    transform: translateY(-3px);  /* Lift on hover */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4);
+}
+
+#rollButton:active {
+    transform: translateY(0);  /* Press down */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    margin-top: 5%;  /* Your margin */
+    color: #EEEEEE;  /* Your light gray */
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    padding: 20px 0;  /* Added padding for better spacing */
+}
+
+/* Responsive design: Mobile-friendly */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;  /* Full width on mobile */
+    }
+    
+    h1 {
+        font-size: 5rem;  /* Scale down heading */
+    }
+    
+    .dice {
+        display: block;  /* Stack vertically */
+        margin: 20px auto;  /* Center each */
+    }
+    
+    .img1, .img2 {
+        width: 60%;  /* Smaller on mobile */
+        max-width: 120px;
+    }
+    
+    p {
+        font-size: 1.5rem;  /* Smaller labels */
+    }
+    
+    #rollButton {
+        font-size: 1.5rem;
+        padding: 12px 24px;
+    }
+}
